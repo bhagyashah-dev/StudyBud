@@ -7,12 +7,16 @@ This project was built during my internship while learning Django and full-stack
 
 ## Reference
 
-- This project was built while learning Django from Python Django 7 Hour youtube video Course by DennisIvy : https://www.youtube.com/watch?v=PtQiiknWUcI&t=14846s
-- StudyBuddy Original GitHub Repo (Inspired By) : https://github.com/Traversy-Media/StudyBud
+- This project was built while learning Django from Dennis Ivy through the [Django Youtube Course](https://www.youtube.com/watch?v=PtQiiknWUcI&t=14846s).
+- The project was inspired by [StudyBud GitHub Repo](https://github.com/Traversy-Media/StudyBud).
 
 ## Screenshots
 
-
+<p align="center">
+  <img src="static/images/screenshots/Home_Page.png" alt="Home Page" width="32%">
+  <img src="static/images/screenshots/Discussion_Page.png" alt="Discussion Page" width="32%">
+  <img src="static/images/screenshots/Profile_Page.png" alt="Profile Page" width="32%">
+</p>
 
 ## Features
 
