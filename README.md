@@ -1,14 +1,22 @@
 # StudyBud
-A backend internship project made using python django basics and django api rest framework with MYSQL integration. This application creates room for studying with similar topics of students and interact with each other and has feature of CRUD.
 
-# StudyBud
+StudyBud is a Django-based web application where users can create and join study rooms on various topics, engage in discussions, and collaborate with other learners.
 
-A Django-based discussion platform.
+## Reference
+
+This project was built while learning Django from Python Django 7 Hour youtube video Course by DennisIvy : https://www.youtube.com/watch?v=PtQiiknWUcI&t=14846s
+StudyBuddy Original GitHub Repo : https://github.com/Traversy-Media/StudyBud
+
+## Screenshots
+
+
 
 ## Features
 
 - User Authentication
 - Rooms
+- Activity Feed
+- User Profile Page
 - Topics
 - Messages
 - CRUD Operations
@@ -16,9 +24,12 @@ A Django-based discussion platform.
 ## Technologies Used
 
 - Django
+- Django Rest Framework API
+- Python
 - MySQL
 - HTML
 - CSS
+- JS
 
 ## Run Locally
 
