@@ -14,7 +14,7 @@ This project was built during my internship while learning Django and full-stack
 
 <p align="center">
   <img src="static/images/screenshots/Home_Page.png" alt="Home Page" width="32%">
-  <img src="static/images/screenshots/Discussion_Page.png" alt="Discussion Page" width="32%">
+  <img src="static/images/screenshots/Discussion_Room.png" alt="Discussion Room" width="32%">
   <img src="static/images/screenshots/Profile_Page.png" alt="Profile Page" width="32%">
 </p>
 
