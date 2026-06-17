@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>MyProject</title>
-    <!-- <link rel='stylesheet' href='main.css'> -->
+    <title>StudyBuddy</title>
+    <link rel='stylesheet' href="{% static 'styles/main.css' %}">
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -16,6 +17,8 @@
         {% endfor %}
     </ul>
     {% endif %} 
+
+    <!-- <img src="{% static 'images/image.png' %}" alt=""> -->
 
     {% block content %}
 
