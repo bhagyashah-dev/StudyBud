@@ -1,16 +1,30 @@
-<a href="/">
-    <h1>LOGO</h1>
-</a>
+{% load static %}
+<header class="site-header">
+    <nav class="navbar page-shell" aria-label="Primary navigation">
+        <a href="/" class="brand" aria-label="StudyBuddy home">
+            <img src="{% static 'images/logo.svg' %}" alt="" class="brand__mark">
+            <span>StudyBuddy</span>
+        </a>
 
-<form method="GET" action="{% url 'home' %}">
-    <input type="text" name="q" placeholder="Search Rooms ..." />
-</form>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-{% if request.user.is_authenticated %}
-<p>Hello {{request.user}}</p>
-<a href="{% url 'logout' %}">Logout</a>
-{% else %}
-<a href="{% url 'login' %}">Login</a>
-{% endif %}
+        <div class="nav-menu" data-nav-menu>
+            <form method="GET" action="{% url 'home' %}" class="navbar-search">
+                <input type="text" name="q" placeholder="Search rooms..." aria-label="Search rooms" />
+            </form>
 
-<hr>
+            <div class="nav-actions">
+                {% if request.user.is_authenticated %}
+                <span class="user-greeting">Hello, {{request.user}}</span>
+                <a class="btn btn-secondary" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>

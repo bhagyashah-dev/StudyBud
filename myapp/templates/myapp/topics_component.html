@@ -1,12 +1,13 @@
-<h3>Browse Topics</h3>
-        <hr>
+<div class="panel topics-panel">
+    <div class="panel__header">
+        <h3>Browse Topics</h3>
+    </div>
 
-        <div>
-            <a href="{% url 'home' %}">All</a>
-        </div>
+    <div class="topic-list">
+        <a class="topic-link" href="{% url 'home' %}">All</a>
 
         {% for topic in topics %}
-            <div>   
-                <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
-            </div>
+            <a class="topic-link" href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a>
         {% endfor %}
+    </div>
+</div>

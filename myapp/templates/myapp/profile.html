@@ -2,27 +2,34 @@
 
 {% block content %}
 
-<style>
-    .profile-container{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-</style>
+{% load static %}
 
-<h1>{{user.username}}</h1>
-
-<div class="profile-container">
+<section class="profile-hero">
+    <img src="{% static 'images/avatar.svg' %}" alt="" class="profile-avatar">
     <div>
+        <p class="eyebrow">Member profile</p>
+        <h1>{{user.username}}</h1>
+    </div>
+</section>
+
+<div class="profile-container layout-three">
+    <aside class="sidebar sidebar-left">
         {% include 'myapp/topics_component.html' %}
-    </div>
+    </aside>
 
-    <div>
+    <section class="content-column">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">Hosted rooms</p>
+                <h2>{{user.username}}'s rooms</h2>
+            </div>
+        </div>
         {% include 'myapp/feed_component.html' %}
-    </div>
+    </section>
         
-    <div>
+    <aside class="sidebar sidebar-right">
         {% include 'myapp/activity_component.html' %}
-    </div>
+    </aside>
 </div>
 
 {% endblock content %}

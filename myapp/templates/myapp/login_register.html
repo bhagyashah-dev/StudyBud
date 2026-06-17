@@ -4,8 +4,14 @@
 
 
 {% if page == 'login' %}
-<div>
-    <form method="POST" action="">
+<div class="auth-page">
+    <div class="form-card">
+        <div class="form-card__header">
+            <h1>Welcome back</h1>
+            <p>Log in to continue the discussion.</p>
+        </div>
+
+    <form method="POST" action="" class="app-form">
         {% csrf_token %}
 
         <label>Username : </label>
@@ -14,24 +20,30 @@
         <label>Password : </label>
         <input type="password" name="password" placeholder="Enter password" />
 
-        <input type="submit" value="Login">
+        <input class="btn btn-primary" type="submit" value="Login">
     </form>
 
-    <p>havent signed up yet?</p>
-    <a href="{% url 'register' %}">Sign Up</a>
+    <p class="form-switch">Haven't signed up yet? <a href="{% url 'register' %}">Sign Up</a></p>
+    </div>
 </div>
 
 {% else %}
 
-<div>
-    <form method="POST" action="">
+<div class="auth-page">
+    <div class="form-card">
+        <div class="form-card__header">
+            <h1>Create account</h1>
+            <p>Join rooms, reply to messages, and follow topics.</p>
+        </div>
+
+    <form method="POST" action="" class="app-form">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Register">
+        <input class="btn btn-primary" type="submit" value="Register">
     </form>
 
-    <p>already a user?</p>
-    <a href="{% url 'login' %}">Login</a>
+    <p class="form-switch">Already a user? <a href="{% url 'login' %}">Login</a></p>
+    </div>
 </div>
 {% endif %}
 

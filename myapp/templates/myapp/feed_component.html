@@ -1,15 +1,30 @@
-        <div>
-            {% for room in rooms %}
-            <div>
-                {% if request.user == room.host %}
-                <a href="{% url 'update-room' room.id %}">Edit</a>
-                <a href="{% url 'delete-room' room.id %}">Delete</a>
-                {% endif %}
-                <a href="{% url 'user-profile' room.host.id %}">@{{room.host.username}}</a>
-                <!-- <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5> -->
-                <h5>{{room.id}} -- <a href="{% url 'room' room.id %}">{{room.name}}</a></h5>
-                <small>{{room.topic.name}}</small>
-                <hr><br>
+<div class="room-feed">
+    {% for room in rooms %}
+    <article class="room-card">
+        <div class="room-card__top">
+            <a class="user-link" href="{% url 'user-profile' room.host.id %}">@{{room.host.username}}</a>
+            {% if request.user == room.host %}
+            <div class="card-actions">
+                <a class="action-link" href="{% url 'update-room' room.id %}">Edit</a>
+                <a class="action-link danger-link" href="{% url 'delete-room' room.id %}">Delete</a>
             </div>
-            {% endfor %}
+            {% endif %}
         </div>
+
+        <!-- <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5> -->
+        <h3 class="room-card__title">
+            <span class="room-number">#{{room.id}}</span>
+            <a href="{% url 'room' room.id %}">{{room.name}}</a>
+        </h3>
+
+        <div class="room-card__meta">
+            <span class="topic-pill">{{room.topic.name}}</span>
+        </div>
+    </article>
+    {% empty %}
+    <div class="empty-state panel">
+        <h3>No rooms found</h3>
+        <p>Try searching for another topic or create a new room.</p>
+    </div>
+    {% endfor %}
+</div>

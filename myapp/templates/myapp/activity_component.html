@@ -1,14 +1,23 @@
-<h3>Recent Activity</h3>
-        <hr>
+<div class="panel activity-panel">
+    <div class="panel__header">
+        <h3>Recent Activity</h3>
+    </div>
+    <div class="activity-list">
         {% for message in room_messages %}
-            <div>
-                <small> <a href="{% url 'user-profile' message.user.id %}">@{{message.user}}</a>  {{message.created|timesince}}</small>
-                <small>replied to "{{message.room}}</small>
+            <article class="activity-card">
+                <small>
+                    <a class="user-link" href="{% url 'user-profile' message.user.id %}">@{{message.user}}</a>
+                    {{message.created|timesince}} ago
+                </small>
+                <small>replied to "{{message.room}}"</small>
 
                 <p>{{message}}</p>
                 {% if request.user == message.user %}
-                    <a href="{% url 'delete-message' message.id %}">Delete</a>
+                    <a class="action-link danger-link" href="{% url 'delete-message' message.id %}">Delete</a>
                 {% endif %}
-                <hr>
-            </div>
+            </article>
+        {% empty %}
+            <p class="muted">No recent activity yet.</p>
         {% endfor %}
+    </div>
+</div>

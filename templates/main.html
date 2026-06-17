@@ -5,13 +5,19 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>StudyBuddy</title>
-    <link rel='stylesheet' href="{% static 'styles/main.css' %}">
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+    <link rel='stylesheet' href="{% static 'css/layout.css' %}">
+    <link rel='stylesheet' href="{% static 'css/components.css' %}">
+    <link rel='stylesheet' href="{% static 'css/forms.css' %}">
 </head>
 <body>
     {% include 'navbar.html' %}
 
     {% if messages %}
-    <ul class="messages">
+    <ul class="messages page-shell">
         {% for message in messages %}
         <li>{{ message }}</li>
         {% endfor %}
@@ -20,9 +26,12 @@
 
     <!-- <img src="{% static 'images/image.png' %}" alt=""> -->
 
-    {% block content %}
+    <main class="page-shell">
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
+    </main>
 
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
