@@ -21,16 +21,6 @@ StudyBud is a Django-based web application where users can create and join study
 - Messages
 - CRUD Operations
 
-## Technologies Used
-
-- Django
-- Django Rest Framework API
-- Python
-- MySQL
-- HTML
-- CSS
-- JS
-
 ## Run Locally
 
 git clone <repo-url>
