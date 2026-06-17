@@ -4,8 +4,8 @@ StudyBud is a Django-based web application where users can create and join study
 
 ## Reference
 
-This project was built while learning Django from Python Django 7 Hour youtube video Course by DennisIvy : https://www.youtube.com/watch?v=PtQiiknWUcI&t=14846s
-StudyBuddy Original GitHub Repo : https://github.com/Traversy-Media/StudyBud
+- This project was built while learning Django from Python Django 7 Hour youtube video Course by DennisIvy : https://www.youtube.com/watch?v=PtQiiknWUcI&t=14846s
+- StudyBuddy Original GitHub Repo : https://github.com/Traversy-Media/StudyBud
 
 ## Screenshots
 
