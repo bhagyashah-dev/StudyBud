@@ -1,3 +1,5 @@
+// Responsive navbar for mobile and differrent devices
+
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav-menu]");
 

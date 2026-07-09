@@ -19,7 +19,7 @@
 
             <div class="nav-actions">
                 {% if request.user.is_authenticated %}
-                <span class="user-greeting">Hello, {{request.user}}</span>
+                <span class="user-greeting">Hello, <a href="{% url 'user-profile' request.user.pk %}">{{ request.user }}</a></span>
                 <a class="btn btn-secondary" href="{% url 'logout' %}">Logout</a>
                 {% else %}
                 <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
